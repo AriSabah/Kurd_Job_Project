@@ -13,7 +13,6 @@ export const heroAnimation = {
         duration: 0.8,
       },
     },
-    viewport: { once: false },
   },
   textAnimation: {
     initial: {
@@ -29,7 +28,6 @@ export const heroAnimation = {
         duration: 0.8,
       },
     },
-    viewport: { once: false },
   },
   backgroundAnimation: {
     initial: {
