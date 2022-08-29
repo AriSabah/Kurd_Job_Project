@@ -9,22 +9,16 @@ const cardAnimation = {
     background: "rgb(1,50,75)",
     background: "linear-gradient(0deg, rgba(1,50,75,1) 0%, rgba(1,50,75,1) 93%, rgba(15,91,130,0.9) 100%",
   },
-  animate: {
+  animate: d => ({
     background: "linear-gradient(360deg, rgba(1,50,75,1) 0%, rgba(1,50,75,1) 93%, rgba(15,91,130,0.9) 100%",
     transition: {
       duration: 8,
       repeat: Infinity,
       repeatType: "loop",
       repeatDelay: 0,
+      delay: d * 5
     },
-  },
-  hover: {
-    "box-shadow": "inset 0 0 2em #2666CF88",
-    transition: {
-      duration: 0.15,
-      type: "just",
-    },
-  },
+  }),
 };
 
 const animation = {
@@ -45,7 +39,7 @@ const animation = {
 const Card = ({ title, description, icon, delay }) => {
   return (
     <motion.dev initial="initial" whileInView="animate" variants={animation} custom={delay}>
-      <motion.div className="card w-96 bg-neutral bg-opacity-50" initial="initial" animate="animate" whileHover="hover" variants={cardAnimation}>
+      <motion.div className="card w-96 bg-neutral bg-opacity-50" initial="initial" animate="animate" variants={cardAnimation} custom={delay}>
         <div className="card-body">
           <img className={`w-24 mx-auto mb-3 ${style.icon}`} src={icon} alt={title} />
           <h2 className="text-3xl text-center text-accent font-bold">{title}</h2>
