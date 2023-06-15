@@ -7,7 +7,7 @@ import Stars from "./Stars";
 const Hero = () => {
   return (
     <motion.div className="hero bg-neutral" whileInView="animate" initial="initial" variants={heroAnimation.backgroundAnimation}>
-      <div className="hero-content flex-col lg:flex-row pb-0 pt-12 relative">
+      <div className="hero-content flex-col-reverse lg:flex-row pb-0 pt-12 relative">
         <Stars />
         <motion.img src="a1.png" className="max-w-sm rounded-lg" whileInView="animate" initial="initial" variants={heroAnimation.imgAnimation} />
         <motion.div className="pb-5" whileInView="animate" initial="initial" variants={heroAnimation.textAnimation}>

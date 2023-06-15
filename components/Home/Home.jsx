@@ -10,7 +10,6 @@ const Home = () => {
         <Hero />
         <Features />
         <Servers />
-        <div style={{height: '1200px'}}></div>
     </div>
   )
 }
