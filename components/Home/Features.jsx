@@ -20,7 +20,7 @@ const Features = () => {
       <motion.h1 className="text-6xl text-accent text-center pb-8 pt-4 md-pt-0 font-bold" initial={{x:-300, opacity:0}} whileInView={{x:0, opacity:1}} transition={{duration: 1.5, type: 'spring', bounce: 0.5}}>Kurd Job Features</motion.h1>
 
       <div className="flex">
-        <div className="grid lg:grid-cols-4 sm:grid-cols-2 gap-6 mx-auto">
+        <div className="grid xl:grid-cols-2 sm:grid-cols-2 gap-6 mx-auto">
           <Card
             icon="icons/ads_click.svg"
             title="Easy To Use"
